@@ -7,9 +7,6 @@ init()
 
 	PrecacheShader( "specialty_doublepoints_zombies" );
 	PrecacheShader( "specialty_instakill_zombies" );
-	PrecacheShader( "specialty_phd_zombies" );
-	PrecacheShader( "specialty_aim_zombies" );
-	PrecacheShader( "specialty_longersprint_zombies" );
 	PrecacheShader( "black" ); 
 	
 	// powerup Vars
@@ -31,8 +28,6 @@ init()
 	level._effect["powerup_grabbed_wave"] 		= loadfx( "misc/fx_zombie_powerup_wave" );
 
 	init_powerups();
-	
-	thread death_check();
 
 	thread watch_for_drop();
 
@@ -47,7 +42,6 @@ init_powerups()
 	add_zombie_powerup( "double_points","zombie_x2_icon",	&"ZOMBIE_POWERUP_DOUBLE_POINTS" );
 	add_zombie_powerup( "full_ammo",  	"zombie_ammocan",	&"ZOMBIE_POWERUP_MAX_AMMO");
 	add_zombie_powerup( "carpenter",  	"zombie_carpenter",	&"ZOMBIE_POWERUP_MAX_AMMO");
-	add_zombie_powerup( "perk",		"zombie_3rd_perk_bottle_sleight",			&"Flak Jacket" );
 
 	// Randomize the order
 	randomize_powerups();
@@ -291,26 +285,6 @@ get_next_powerup()
 	}
 
 	powerup = level.zombie_powerup_array[level.zombie_powerup_index];
-	
-	while( powerup == "perk" && !level.dog_intermission)
-	{	
-		
-		if( level.zombie_powerup_index >= level.zombie_powerup_array.size )
-		{
-			level.zombie_powerup_index = 0;
-			randomize_powerups();
-		}
-		
-		powerup = level.zombie_powerup_array[level.zombie_powerup_index];
-		level.zombie_powerup_index++;
-			
-		if( powerup != "perk" )
-		{
-			return powerup;
-		}
-		
-		wait(0.05);
-	}
 	
 	level.zombie_powerup_index++;
 
@@ -563,14 +537,7 @@ powerup_grab()
 					case "carpenter":
 						level thread start_carpenter( self.origin );
 						players[i] thread powerup_vo("carpenter");
-						break;	
-					case "perk":
-						for(j = 0; j < players.size; j++)
-						{
-							level thread random_perk(players[j]);
-						}
-						break;
-						
+						break;						
 					default:
 						println ("Unrecognized poweup.");
 						break;
@@ -589,34 +556,6 @@ powerup_grab()
 		wait 0.1;
 	}	
 }
-
-random_perk(player)
-{
-	if(player hasperk("specialty_quieter") == false)
-	{
-		player SetPerk( "specialty_quieter" );
-		player maps\_zombiemode_perks::perk_hud_create( "specialty_quieter" );
-		player maps\_zombiemode_perks::perk_think( "specialty_quieter" );
-		return;
-	}
-	
-	if(player hasperk("specialty_longersprint") == false)
-	{
-		player SetPerk( "specialty_longersprint" );
-		player maps\_zombiemode_perks::perk_hud_create( "specialty_longersprint" );
-		player maps\_zombiemode_perks::perk_think( "specialty_longersprint" );
-		return;
-	}
-	
-	if(player hasperk("specialty_bulletaccuracy") == false)
-	{
-		player SetPerk( "specialty_bulletaccuracy" );
-		player maps\_zombiemode_perks::perk_hud_create( "specialty_bulletaccuracy" );
-		player maps\_zombiemode_perks::perk_think( "specialty_bulletaccuracy" );
-		return;
-	}
-}
-
 start_carpenter( origin )
 {
 	level thread play_devil_dialog("carp_vox");
@@ -1222,28 +1161,5 @@ print_powerup_drop( powerup, type )
 		println( "Random Powerup Count: " + level.powerup_score_count );
 		println( "======================================" );
 #/
-}
-
-death_check()
-{
-	while( 1 )
-	{
-		players = getplayers();
-		for ( i = 0; i < players.size; i++ )
-		{
-			if( players[i] maps\_laststand::player_is_in_laststand() )
-			{
-				players[i] UnsetPerk( "specialty_quieter" );
-				players[i] UnsetPerk( "specialty_longersprint" );
-				players[i] UnsetPerk( "specialty_bulletaccuracy" );
-				players[i] maps\_zombiemode_perks::perk_hud_destroy( "specialty_quieter" );
-				players[i] maps\_zombiemode_perks::perk_hud_destroy( "specialty_longersprint" );
-				players[i] maps\_zombiemode_perks::perk_hud_destroy( "specialty_bulletaccuracy" );
-			}
-		}
-		
-		wait( 0.01 );
-		
-	}
 }
 

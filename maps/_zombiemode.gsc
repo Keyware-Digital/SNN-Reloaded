@@ -900,7 +900,7 @@ onPlayerConnect_clientDvars()
 		"compass", "0",
 		"hud_showStance", "0",
 		"cg_thirdPerson", "0",
-		"cg_fov", "85",
+		"cg_fov", "80",
 		"cg_thirdPersonAngle", "0",
 		"ammoCounterHide", "0",
 		"miniscoreboardhide", "0",
@@ -924,7 +924,7 @@ onPlayerSpawned()
 		self waittill( "spawned_player" ); 
  
 		self SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "85",
+			"cg_fov", "80",
 			"cg_thirdPersonAngle", "0" );
 
 		self SetDepthOfField( 0, 0, 512, 4000, 4, 0 );
@@ -1104,7 +1104,7 @@ set_third_person( value )
 	else
 	{
 		self SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "85",
+			"cg_fov", "80",
 			"cg_thirdPersonAngle", "0" );
 
 		self setDepthOfField( 0, 0, 512, 4000, 4, 0 );
@@ -2328,14 +2328,6 @@ pain_sound_player()
 
 player_damage_override( eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, modelIndex, psOffsetTime )
 {
-	if( sMeansOfDeath == "MOD_PROJECTILE_SPLASH" || sMeansOfDeath == "MOD_GRENADE" || sMeansOfDeath == "MOD_GRENADE_SPLASH" || sMeansOfDeath == "MOD_EXPLOSIVE" || sMeansOfDeath == "MOD_FALLING" )
-    {
-        if( self HasPerk( "specialty_quieter" ) )
-        {
-            return;
-        }
-    }
-	
 	self thread pain_sound_player();
 
 	/*	
@@ -2976,7 +2968,7 @@ intermission()
 		setclientsysstate( "levelNotify", "zi", players[i] ); // Tell clientscripts we're in zombie intermission
 
 		players[i] SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "85" );
+			"cg_fov", "80" );
 
 		players[i].health = 100; // This is needed so the player view doesn't get stuck
 		players[i] thread player_intermission();
