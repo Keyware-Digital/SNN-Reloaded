@@ -122,8 +122,8 @@ add_tesla_gun()
 }
 intro_screen()
 {
-	text_line[0] = "Shi No Numa";
-	text_line[1] = "Unknown Location";
+	text_line[0] = "Rising Sun Facility";
+	text_line[1] = "Empire of Japan";
 	//text_line[2] = "Japan";
 
 	flag_wait( "all_players_connected" );

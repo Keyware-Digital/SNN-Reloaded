@@ -92,5 +92,5 @@ weapons\sp\zombie_type100_smg
 weapons\sp\zombie_type99_rifle
 xmodel\viewmodel_jap_infantry_arms
 xmodel\viewmodel_rus_guard_padded_arms
-xmodel\viewmodel_usa_marine_rolledup_arms
 xmodel\viewmodel_usa_pbycrew_arms
+xmodel\viewmodel_usa_raider_arms

@@ -38,7 +38,7 @@ main()
 	maps\_load::main();
 	
 	PrecacheModel("viewmodel_rus_guard_padded_arms");
-	PrecacheModel("viewmodel_usa_marine_rolledup_arms");
+	PrecacheModel("viewmodel_usa_raider_arms");
 	PrecacheModel("viewmodel_jap_infantry_arms");
 	PrecacheModel("viewmodel_usa_pbycrew_arms");
 
@@ -900,7 +900,7 @@ onPlayerConnect_clientDvars()
 		"compass", "0",
 		"hud_showStance", "0",
 		"cg_thirdPerson", "0",
-		"cg_fov", "65",
+		"cg_fov", "85",
 		"cg_thirdPersonAngle", "0",
 		"ammoCounterHide", "0",
 		"miniscoreboardhide", "0",
@@ -924,7 +924,7 @@ onPlayerSpawned()
 		self waittill( "spawned_player" ); 
  
 		self SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "65",
+			"cg_fov", "85",
 			"cg_thirdPersonAngle", "0" );
 
 		self SetDepthOfField( 0, 0, 512, 4000, 4, 0 );
@@ -1104,7 +1104,7 @@ set_third_person( value )
 	else
 	{
 		self SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "65",
+			"cg_fov", "85",
 			"cg_thirdPersonAngle", "0" );
 
 		self setDepthOfField( 0, 0, 512, 4000, 4, 0 );
@@ -2976,7 +2976,7 @@ intermission()
 		setclientsysstate( "levelNotify", "zi", players[i] ); // Tell clientscripts we're in zombie intermission
 
 		players[i] SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "65" );
+			"cg_fov", "85" );
 
 		players[i].health = 100; // This is needed so the player view doesn't get stuck
 		players[i] thread player_intermission();

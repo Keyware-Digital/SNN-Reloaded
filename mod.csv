@@ -31,7 +31,7 @@ sound,sfx,weapon,bowie,bowie_catch
 sound,sfx,weapon,bowie,bowie_start
 sound,sfx,weapon,bowie,bowie_toss
 sound,sfx,weapon,bowie,bowie_turn
-xmodel,viewmodel_usa_marine_rolledup_arms
+xmodel,viewmodel_usa_raider_arms
 xmodel,viewmodel_rus_guard_padded_arms
 xmodel,viewmodel_jap_infantry_arms
 xmodel,viewmodel_usa_pbycrew_arms
