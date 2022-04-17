@@ -124,7 +124,7 @@ intro_screen()
 {
 	text_line[0] = "Rising Sun Facility";
 	text_line[1] = "Empire of Japan";
-	//text_line[2] = "Japan";
+	text_line[2] = "October 21st, 1945";
 
 	flag_wait( "all_players_connected" );
 	wait(2);
