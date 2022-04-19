@@ -633,7 +633,7 @@ give_loadout()
     self giveWeapon( loadout_weapon[index] );
     self SwitchToWeapon( loadout_weapon[index] );
 	self.laststandpistol = loadout_weapon[index];
-	/* END RAMPAGE */
+	/* SNN Reloaded - Unique Pistols */	
 
 	for( i = 0; i < level.player_loadout.size; i++ )
 	{
