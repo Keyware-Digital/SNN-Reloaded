@@ -174,7 +174,7 @@ intro_screen()
 		level.intro_hud[i].alpha = 0;
 		wait(1.5);
 	}	
-	//wait(1.5);
+	wait(2.0);
 	for(i = 0 ; i < 3; i++)
 	{
 		level.intro_hud[i] destroy();
