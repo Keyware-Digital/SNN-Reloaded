@@ -125,9 +125,9 @@ give_bowie()
 	self do_bowie_flourish_end( gun );
 	self.is_drinking = undefined;
 
-	self thread tom_bowier_bay();
+	self thread bowie_bay();
 }
-tom_bowier_bay()
+bowie_bay()
 {
 	for(;;)
 	{
