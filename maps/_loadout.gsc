@@ -415,6 +415,7 @@ init_models_and_variables_loadout()
 	}
 	else if( GetDvar( "zombiemode" ) == "1" || IsSubStr( level.script, "nazi_zombie_" ) ) // CODER_MOD (Austin 5/4/08): zombiemode loadout setup
 	{
+		// SNN Reloaded - Unique Pistols
 		PrecacheItem( "zombie_colt" );
 		PrecacheItem("walther");
 		PrecacheItem("nambu");
@@ -621,7 +622,7 @@ give_loadout()
 		}
 	}
 
-	/* BEGIN RAMPAGE */	
+	/* SNN Reloaded - Unique Pistols */	
 	index = maps\_zombiemode_weapons::get_player_index(self);
 	loadout_weapon = [];
 	loadout_weapon[0] = "zombie_colt"; // for dempsey
@@ -629,8 +630,8 @@ give_loadout()
 	loadout_weapon[2] = "nambu"; // for Takeo
  	loadout_weapon[3] = "walther"; // for Richtofen
 
-    	self giveWeapon( loadout_weapon[index] );
-    	self SwitchToWeapon( loadout_weapon[index] );
+    self giveWeapon( loadout_weapon[index] );
+    self SwitchToWeapon( loadout_weapon[index] );
 	self.laststandpistol = loadout_weapon[index];
 	/* END RAMPAGE */
 
