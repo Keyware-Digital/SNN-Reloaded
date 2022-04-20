@@ -38,7 +38,7 @@ main()
 	maps\_load::main();
 	
 	PrecacheModel("viewmodel_rus_guard_padded_arms");
-	PrecacheModel("viewmodel_usa_raider_arms");
+	PrecacheModel("viewmodel_hands_cloth_marine_bare");
 	PrecacheModel("viewmodel_jap_infantry_arms");
 	PrecacheModel("viewmodel_usa_pbycrew_arms");
 
