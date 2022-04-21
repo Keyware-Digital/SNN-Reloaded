@@ -652,7 +652,7 @@ start_carpenter( origin )
 			if( !IsDefined( chunk ) )
 				break;
 
-			windows thread maps\_zombiemode_blockers_new::replace_chunk( chunk, false, true );
+			windows thread maps\_zombiemode_blockers::replace_chunk( chunk, false, true );
 			windows.clip enable_trigger(); 
 			windows.clip DisconnectPaths();
 			wait_network_frame();
@@ -912,14 +912,14 @@ full_ammo_powerup( drop_item )
 
 		for( x = 0; x < primaryWeapons.size; x++ )
 		{
-			players[i] GiveMaxAmmo( primaryWeapons[x] );
-			players[i] SetWeaponAmmoClip( "stielhandgranate", 4 );
-		
+			players[i] SetWeaponAmmoClip( primaryWeapons[x], WeaponClipSize( primaryWeapons[x] ) );
+			players[i] GiveMaxAmmo( primaryWeapons[x], "stielhandgranate", 4 );
+
 			if( players[i] hasweapon( "molotov" ) )
 			{
-			
+
 				players[i] SetWeaponAmmoClip( "molotov", 4 );
-				
+
 			}	
 		}
 	}

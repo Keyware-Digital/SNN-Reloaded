@@ -1,4 +1,4 @@
-#include common_scripts\utility; 
+#include common_scripts\utility;
 #include maps\_utility;
 #include maps\_zombiemode_utility;
 #include maps\_music;
@@ -48,8 +48,6 @@ main()
 	
 	SetDvar( "perk_altMeleeDamage", 1000 );
 	
-	level thread intro_screen();
-	
 	maps\_zombiemode_weapons::add_zombie_weapon( "mine_bouncing_betty",&"ZOMBIE_WEAPON_SATCHEL_2000", 2000 );		
 	maps\_zombiemode_weapons::add_zombie_weapon( "ptrs41_zombie", 						&"ZOMBIE_WEAPON_PTRS41_750", 				750,	"vox_sniper", 5);	
 	
@@ -76,11 +74,12 @@ main()
 
 
 	maps\_zombiemode::main();
-   maps\nazi_zombie_sumpf_blockers::init();
+   	maps\nazi_zombie_sumpf_blockers::init();
 	
 	//init_sounds();
 	init_zombie_sumpf();
 	
+    level thread intro_screen();
 	level thread toilet_useage();
 	level thread radio_one();
 	level thread radio_two();
@@ -204,10 +203,10 @@ include_weapons()
 
 	// Semi Auto
 	include_weapon( "zombie_m1carbine" );
-	include_weapon( "zombie_m1garand", false );
+	include_weapon( "zombie_m1garand" );
 	include_weapon( "zombie_gewehr43" );
 	//include_weapon( "kar98k" );	// replaces the mosin_rifle_bayonet if needed
-	include_weapon( "zombie_type99_rifle", false );
+	include_weapon( "zombie_type99_rifle" );
 
 	// Full Auto
 	include_weapon( "zombie_stg44" );
