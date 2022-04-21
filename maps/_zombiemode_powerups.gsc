@@ -854,14 +854,14 @@ full_ammo_powerup( drop_item )
 
 		for( x = 0; x < primaryWeapons.size; x++ )
 		{
-			players[i] GiveMaxAmmo( primaryWeapons[x] );
-			players[i] SetWeaponAmmoClip( "stielhandgranate", 4 );
-		
+			players[i] SetWeaponAmmoClip( primaryWeapons[x], WeaponClipSize( primaryWeapons[x] ) );
+			players[i] GiveMaxAmmo( primaryWeapons[x], "stielhandgranate", 4 );
+
 			if( players[i] hasweapon( "molotov" ) )
 			{
-			
+
 				players[i] SetWeaponAmmoClip( "molotov", 4 );
-				
+
 			}	
 		}
 	}
