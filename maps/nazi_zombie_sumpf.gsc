@@ -192,20 +192,21 @@ include_weapons()
 	include_weapon( "type99_rifle_scoped_zombie_upgraded" );
 	include_weapon( "zombie_gewehr43_upgraded" );
 	include_weapon( "mosin_rifle" );
-	//include_weapon( "mosin_rifle_bayonet" );
+	//include_weapon( "mosin_rifle_bayonet" );	//Disabled in favour of Bowie.
+	//include_weapon( "kar98k_bayonet" );		//Disabled in favour of Bowie.
 
 	// Pistols
-	//include_weapon( "zombie_colt" );
+	include_weapon( "zombie_colt" );	//Dempsey
 	include_weapon( "sw_357" );
-	//include_weapon( "tokarev" );	
-	//include_weapon( "nambu" );
-	//include_weapon( "walther" );
+	include_weapon( "tokarev" );		//Nikolai
+	include_weapon( "nambu" );			//Takeo
+	include_weapon( "walther" );		//Richtofen
 
 	// Semi Auto
 	include_weapon( "zombie_m1carbine" );
 	include_weapon( "zombie_m1garand" );
 	include_weapon( "zombie_gewehr43" );
-	//include_weapon( "kar98k" );	// replaces the mosin_rifle_bayonet if needed
+	//include_weapon( "kar98k" );	// replaced with type99_rifle
 	include_weapon( "zombie_type99_rifle" );
 
 	// Full Auto
@@ -259,6 +260,9 @@ include_weapons()
 	
 	// limited weapons
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_colt", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "tokarev", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "nambu", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "walther", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_type99_rifle", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_m1garand", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_gewehr43", 0 );
