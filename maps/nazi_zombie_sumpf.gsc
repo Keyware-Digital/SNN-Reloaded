@@ -260,6 +260,9 @@ include_weapons()
 	
 	// limited weapons
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_colt", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "tokarev", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "nambu", 0 );
+	maps\_zombiemode_weapons::add_limited_weapon( "walther", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_type99_rifle", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_m1garand", 0 );
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_gewehr43", 0 );
