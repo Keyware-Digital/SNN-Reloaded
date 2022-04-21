@@ -37,8 +37,8 @@ main()
 	// load map defaults
 	maps\_load::main();
 	
-	PrecacheModel("viewmodel_rus_guard_padded_arms");
 	PrecacheModel("viewmodel_hands_cloth_marine_bare");
+	PrecacheModel("viewmodel_rus_guard_padded_arms");
 	PrecacheModel("viewmodel_jap_infantry_arms");
 	PrecacheModel("viewmodel_usa_pbycrew_arms");
 
@@ -941,6 +941,8 @@ onPlayerSpawned()
 				// set the initial score on the hud		
 				self maps\_zombiemode_score::set_player_score_hud( true ); 
 				self thread player_zombie_breadcrumb();
+				self thread player_melee();
+				//self thread player_reload();
 
 				//Init stat tracking variables
 				self.stats["kills"] = 0;
@@ -2329,8 +2331,8 @@ pain_sound_player()
 player_damage_override( eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, modelIndex, psOffsetTime )
 {
 	self thread pain_sound_player();
-
-	/*	
+	
+	/* Disabled because it gives you god mode lel
 	if(self hasperk("specialty_armorvest") && eAttacker != self)
 	{
 			iDamage = iDamage * 0.75;
@@ -2968,7 +2970,7 @@ intermission()
 		setclientsysstate( "levelNotify", "zi", players[i] ); // Tell clientscripts we're in zombie intermission
 
 		players[i] SetClientDvars( "cg_thirdPerson", "0",
-			"cg_fov", "80" );
+		"cg_fov", "80" );
 
 		players[i].health = 100; // This is needed so the player view doesn't get stuck
 		players[i] thread player_intermission();
@@ -3235,4 +3237,57 @@ check_for_jugg_perk()
 	}
 
 
+}
+
+player_reload()
+{
+	self endon( "disconnect" );
+	self endon( "death" );
+ 
+	for(;;)
+	{
+		self waittill( "reload_start" );
+		wpn = self getCurrentWeapon();
+		if( !isDefined( wpn ) || wpn == "" ) //List the weapons you don't want them to say vox when reloading.
+		{
+			continue;
+		}
+		if( level.player_is_speaking != 1 )
+		{
+			sound = maps\_zombiemode_weapons::get_player_index( self );
+			level.player_is_speaking = 1;
+			self playsound( "plr_" + sound + "_vox_gen_reload_0" );
+			wait 1.5;
+			level.player_is_speaking = 0;
+		}
+		else
+		{
+			wait 0.3;
+			continue;
+		}
+	wait 5; //Cool down time (Change this if you want them to say it less)
+	}
+}
+
+player_melee()
+{
+	self endon( "disconnect" );
+	self endon( "death" );
+ 
+	for(;;)
+	{
+		if( self MeleeButtonPressed())
+		{
+			if( level.player_is_speaking != 1 )
+			{
+				r = randomIntRange( 1, 7 );
+				sound = maps\_zombiemode_weapons::get_player_index( self );
+				level.player_is_speaking = 1;
+				self playsound( "plr_" + sound + "_vox_gen_exert_" + r );
+				wait 1;
+				level.player_is_speaking = 0;
+			}
+		}
+	wait 1;
+	}
 }

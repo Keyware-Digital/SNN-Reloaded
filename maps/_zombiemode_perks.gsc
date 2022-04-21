@@ -697,6 +697,16 @@ perk_hud_create( perk )
 			shader = "specialty_doubletap_zombies";
 			break;
 
+		case "specialty_detectexplosive":
+			shader = "specialty_phd_zombies";
+			break;
+			
+		case "specialty_longersprint":
+			shader = "specialty_longersprint_zombies";
+			break;
+			
+		case "specialty_bulletaccuracy":
+			shader = "specialty_aim_zombies";
 		default:
 			shader = "";
 			break;

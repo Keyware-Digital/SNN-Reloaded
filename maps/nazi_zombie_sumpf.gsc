@@ -120,11 +120,12 @@ add_tesla_gun()
 		}
 	}
 }
+
 intro_screen()
 {
 	text_line[0] = "Rising Sun Facility";
 	text_line[1] = "Empire of Japan";
-	text_line[2] = "October 21st, 1945;
+	text_line[2] = "October 21st, 1945";
 
 	flag_wait( "all_players_connected" );
 	wait(2);
@@ -185,7 +186,7 @@ intro_screen()
 // Also adds these weapons to the random treasure chest.
 include_weapons()
 {
-	// New - Trebor
+	// SNN Reloaded
 	include_weapon( "type99_lmg" );
 	include_weapon( "dp28" );
 	include_weapon( "svt40" );
@@ -272,6 +273,7 @@ include_powerups()
 	include_powerup( "double_points" );
 	include_powerup( "full_ammo" );
 	include_powerup( "carpenter" );
+	include_powerup( "perk" );
 }
 
 include_weapon( weapon_name )

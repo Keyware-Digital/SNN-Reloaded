@@ -86,7 +86,7 @@ init_weapons()
 	PrecacheItem("tokarev");
 	PrecacheItem("walther");
 
-	// New - Trebor
+	// SNN Reloaded - Trebor
 	add_zombie_weapon( "type99_rifle_scoped_zombie_upgraded",&"ZOMBIE_WEAPON_TYPE99_S_B_750",750,"vox_ppsh",5);
 	add_zombie_weapon( "zombie_gewehr43_upgraded",&"ZOMBIE_WEAPON_GEWEHR43_600",600,"vox_ppsh",0 );
 

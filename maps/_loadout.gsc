@@ -622,7 +622,7 @@ give_loadout()
 		}
 	}
 
-	/* SNN Reloaded - Unique Pistols */	
+	/* SNN Reloaded - Unique Pistols */
 	index = maps\_zombiemode_weapons::get_player_index(self);
 	loadout_weapon = [];
 	loadout_weapon[0] = "zombie_colt"; // for dempsey
@@ -633,7 +633,7 @@ give_loadout()
     self giveWeapon( loadout_weapon[index] );
     self SwitchToWeapon( loadout_weapon[index] );
 	self.laststandpistol = loadout_weapon[index];
-	/* SNN Reloaded - Unique Pistols */	
+	/* SNN Reloaded - Unique Pistols */
 
 	for( i = 0; i < level.player_loadout.size; i++ )
 	{
