@@ -594,7 +594,7 @@ start_carpenter( origin )
 			if( !IsDefined( chunk ) )
 				break;
 
-			windows thread maps\_zombiemode_blockers_new::replace_chunk( chunk, false, true );
+			windows thread maps\_zombiemode_blockers::replace_chunk( chunk, false, true );
 			windows.clip enable_trigger(); 
 			windows.clip DisconnectPaths();
 			wait_network_frame();
