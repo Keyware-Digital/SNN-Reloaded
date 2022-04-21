@@ -417,9 +417,9 @@ init_models_and_variables_loadout()
 	{
 		// SNN Reloaded - Unique Pistols
 		PrecacheItem( "zombie_colt" );
-		PrecacheItem("walther");
-		PrecacheItem("nambu");
-		PrecacheItem("tokarev");
+		PrecacheItem( "walther" );
+		PrecacheItem( "nambu" );
+		PrecacheItem( "tokarev" );
 		PrecacheItem( "napalmblob" );
 		PrecacheItem( "napalmbloblight" );
 		//set_switch_weapon( "zombie_colt" );
