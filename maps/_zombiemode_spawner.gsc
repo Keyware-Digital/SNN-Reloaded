@@ -9,8 +9,8 @@ init()
 	level.zombie_move_speed = 1; 
 	level.zombie_health = 150; 
 	
-	level.zombie_eyes_limited = 1;
-	level.zombie_eyes_disabled = 1;
+	level.zombie_eyes_limited = 0;
+	level.zombie_eyes_disabled = 0;
 	
 	if(getdvarint("g_allzombieseyeglow"))
 	{
@@ -2871,7 +2871,7 @@ zombie_eye_glow()
 
 	if(!isdefined(level._numZombEyeGlows))
 	{
-		level._numZombEyeGlows = 0;
+		level._numZombEyeGlows = 24;
 	}
 	
 	if(level.zombie_eyes_limited && level._numZombEyeGlows > 8)
