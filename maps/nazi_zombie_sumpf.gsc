@@ -63,8 +63,8 @@ main()
 	//JV - shellshock for player zipline damage
 	precacheshellshock("death");
 
-	// Trebor - precache the 3 nations loadout pistols
-	PrecacheItem( "zombie_stg44" );
+	// SNN: Reloaded - precache the 3 nations loadout pistols
+	//PrecacheItem( "zombie_stg44" );
 
 	// If you want to modify/add to the weapons table, please copy over the _zombiemode_weapons init_weapons() and paste it here.
 	// I recommend putting it in it's own function...
@@ -186,7 +186,7 @@ intro_screen()
 // Also adds these weapons to the random treasure chest.
 include_weapons()
 {
-	// SNN Reloaded
+	// SNN: Reloaded
 	include_weapon( "type99_lmg" );
 	include_weapon( "dp28" );
 	include_weapon( "svt40" );
