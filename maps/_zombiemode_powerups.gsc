@@ -11,6 +11,8 @@ init()
 	PrecacheShader( "specialty_aim_zombies" );
 	PrecacheShader( "specialty_longersprint_zombies" );
 	PrecacheShader( "black" ); 
+
+	PrecacheModel( "zombie_pickup_perkbottle" );
 	
 	// powerup Vars
 	set_zombie_var( "zombie_insta_kill", 				0 );
@@ -47,7 +49,7 @@ init_powerups()
 	add_zombie_powerup( "double_points","zombie_x2_icon",	&"ZOMBIE_POWERUP_DOUBLE_POINTS" );
 	add_zombie_powerup( "full_ammo",  	"zombie_ammocan",	&"ZOMBIE_POWERUP_MAX_AMMO");
 	add_zombie_powerup( "carpenter",  	"zombie_carpenter",	&"ZOMBIE_POWERUP_MAX_AMMO");
-	add_zombie_powerup( "perk",			"zombie_3rd_perk_bottle_sleight",	&"ZOMBIE_PERK_FLAK_JACKET" );	//Flak Jacket
+	add_zombie_powerup( "perk",			"zombie_pickup_perkbottle",	&"ZOMBIE_PERK_FLAK_JACKET" );	//Flak Jacket
 
 	// Randomize the order
 	randomize_powerups();
