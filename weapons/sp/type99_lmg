@@ -11,3 +11,6 @@ gr_bayonet_click gr_bayonet_click
 gr_mg_deploy_start gr_mg_deploy_start
 gr_mg_deploy_end gr_mg_deploy_end
 gr_mg_break_down gr_mg_break_down
+bowie_swing bowie_swing
+bowie_stab bowie_stab
+bowie_pull bowie_pull

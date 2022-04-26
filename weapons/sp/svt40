@@ -5,3 +5,6 @@ gr_svt40_charge_plr gr_svt40_charge_plr
 gr_svt40_mag_in_plr gr_svt40_mag_in_plr 
 gr_svt40_mag_out_plr gr_svt40_mag_out_plr 
 gr_svt40_futz_plr gr_svt40_futz_plr 
+bowie_swing bowie_swing
+bowie_stab bowie_stab
+bowie_pull bowie_pull

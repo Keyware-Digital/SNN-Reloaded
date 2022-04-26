@@ -5,9 +5,9 @@ tesla_clip_in tesla_clip_in
 tesla_handle_release tesla_handle_release
 tesla_switch_flip_on tesla_switch_flip_on
 tesla_to_idle tesla_to_idle
-bowie_swing bowie_swing
-bowie_stab bowie_stab
-bowie_pull bowie_pull
 knife_stab_plr knife_stab_plr
 knife_pull_plr knife_pull_plr
 Knife_slash_plr Knife_slash_plr
+bowie_swing bowie_swing
+bowie_stab bowie_stab
+bowie_pull bowie_pull
