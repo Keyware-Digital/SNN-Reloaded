@@ -9,7 +9,7 @@ menufile,ui/sumpf_options_game_pc.menu
 sound,mod_shi_no_numa_weapons_new,,all_mp
 sound,mod_shi_no_numa_vox,nazi_zombie_factory,all_sp
 sound,mod_shi_no_numa,nazi_zombie_factory,all_sp
-sound,mod_menu_music,nazi_zombie_factory,all_sp
+sound,mod_snn_menu_music,nazi_zombie_factory,all_sp
 sound,music_mainmenu,main_menu
 sound,sfx,weapon,uber,uber_m_left
 sound,sfx,weapon,uber,uber_m_right
