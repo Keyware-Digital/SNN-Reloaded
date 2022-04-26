@@ -5,7 +5,4 @@ gr_m1carbine_mag_out_plr gr_m1carbine_mag_out_plr
 gr_m1carbine_futz_plr gr_m1carbine_futz_plr 
 gr_m1carbine_mag_in_plr gr_m1carbine_mag_in_plr 
 gr_m1carbine_tap_plr gr_m1carbine_tap_plr 
-gr_m1carbine_charge_plr gr_m1carbine_charge_plr 
-bowie_swing bowie_swing
-bowie_stab bowie_stab
-bowie_pull bowie_pull
+gr_m1carbine_charge_plr gr_m1carbine_charge_plr
