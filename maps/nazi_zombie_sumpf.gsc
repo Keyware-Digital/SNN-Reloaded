@@ -103,6 +103,9 @@ main()
 		
 		//initialize zombie behind vox 
 		players[i] thread player_zombie_awareness();
+
+		//dev
+		//players[i] SetClientDvar("sv_cheats", 1); //enable cheats for testing purposes
 	}		
 
 

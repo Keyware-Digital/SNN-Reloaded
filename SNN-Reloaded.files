@@ -35,7 +35,6 @@ sound\sfx\weapon\uber\uber_m_left.wav
 sound\sfx\weapon\uber\uber_m_right.wav
 sound\sfx\weapon\uber\uber_shot_m.wav
 sound\sfx\weapon\uber\uber_shot_st.wav
-soundaliases\mod_menu_music.csv
 soundaliases\mod_shi_no_numa.csv
 soundaliases\mod_shi_no_numa_vox.csv
 soundaliases\mod_shi_no_numa_weapons_new.csv
