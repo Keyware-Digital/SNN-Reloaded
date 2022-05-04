@@ -257,9 +257,8 @@ include_weapons()
 	include_weapon( "ray_gun" );
 	include_weapon( "tesla_gun" );
 	
-	//bouncing betties
+	//bouncing betties & bowie
 	include_weapon("mine_bouncing_betty");
-	
 	include_weapon("zombie_bowie_flourish");
 	
 	// limited weapons
