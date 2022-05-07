@@ -82,9 +82,9 @@ init_weapons()
 {
 	// Zombify
 	PrecacheItem( "zombie_melee" );
-	PrecacheItem("nambu");
-	PrecacheItem("tokarev");
-	PrecacheItem("walther");
+	PrecacheItem( "nambu" );
+	PrecacheItem( "tokarev" );
+	PrecacheItem( "walther" );
 
 	// SNN: Reloaded
 	add_zombie_weapon( "type99_rifle_scoped_zombie_upgraded",	&"ZOMBIE_WEAPON_TYPE99_S_B_750",		750,		"vox_ppsh",	5);

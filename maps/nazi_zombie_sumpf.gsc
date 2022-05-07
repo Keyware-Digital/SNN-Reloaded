@@ -258,8 +258,8 @@ include_weapons()
 	include_weapon( "tesla_gun" );
 	
 	//bouncing betties & bowie
-	include_weapon("mine_bouncing_betty");
-	include_weapon("zombie_bowie_flourish");
+	include_weapon( "mine_bouncing_betty" );
+	include_weapon( "zombie_bowie_flourish" );
 	
 	// limited weapons
 	maps\_zombiemode_weapons::add_limited_weapon( "zombie_colt", 0 );
