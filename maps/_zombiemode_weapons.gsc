@@ -87,8 +87,8 @@ init_weapons()
 	PrecacheItem("walther");
 
 	// SNN: Reloaded
-	add_zombie_weapon( "type99_rifle_scoped_zombie_upgraded",&"ZOMBIE_WEAPON_TYPE99_S_B_750",750,"vox_ppsh",5);
-	add_zombie_weapon( "zombie_gewehr43_upgraded",&"ZOMBIE_WEAPON_GEWEHR43_600",600,"vox_ppsh",0 );
+	add_zombie_weapon( "type99_rifle_scoped_zombie_upgraded",	&"ZOMBIE_WEAPON_TYPE99_S_B_750",		750,		"vox_ppsh",	5);
+	add_zombie_weapon( "zombie_gewehr43_upgraded",				&"ZOMBIE_WEAPON_GEWEHR43_600",			600,		"vox_ppsh",	0 );
 
 	// Pistols
 	add_zombie_weapon( "colt", 									&"ZOMBIE_WEAPON_COLT_50", 					50,		"vox_crappy", 8 );

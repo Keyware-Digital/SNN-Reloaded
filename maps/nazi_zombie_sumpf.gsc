@@ -190,12 +190,12 @@ intro_screen()
 include_weapons()
 {
 	// SNN: Reloaded
-	include_weapon( "type99_lmg" );
 	include_weapon( "dp28" );
-	include_weapon( "svt40" );
-	include_weapon( "type99_rifle_scoped_zombie_upgraded" );
-	include_weapon( "zombie_gewehr43_upgraded" );
 	include_weapon( "mosin_rifle" );
+	include_weapon( "svt40" );
+	include_weapon( "type99_lmg" );
+	include_weapon( "type99_rifle_scoped_zombie_upgraded" );
+	//include_weapon( "zombie_gewehr43_upgraded" );
 	//include_weapon( "mosin_rifle_bayonet" );	//Disabled in favour of Bowie.
 	//include_weapon( "kar98k_bayonet" );		//Disabled in favour of Bowie.
 
