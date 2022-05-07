@@ -1699,6 +1699,11 @@ weapon_spawn_think()
 			}
 		}		
 
+		if(is_grenade && player GetWeaponAmmoClip("stielhandgranate") >= 4)		//BuyNadeFix
+        {
+            continue;
+        }
+
 		if( !player_has_weapon )
 		{
 			// else make the weapon show and give it
