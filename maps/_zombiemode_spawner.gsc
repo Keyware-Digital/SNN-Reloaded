@@ -1307,17 +1307,17 @@ zombie_gib_on_damage()
 			return;
 		}
 
+		if(attacker HasPerk("specialty_altmelee") && type == "MOD_MELEE" && !self.damage_done )
+		{
+		self DoDamage( int(amount * 6), point, attacker, type ); 
+		self.damage_done = false;
+		}
+
 		if( !self zombie_should_gib( amount, attacker, type ) )
 		{
 			continue; 
 		}
 		
-	if(attacker HasPerk("specialty_altmelee") && type == "MOD_MELEE" && !self.damage_done )
-	{
-		self DoDamage( int(amount * 6), point, attacker, type ); 
-		self.damage_done = false;
-    }
-	
 		if( self head_should_gib( attacker, type, point ) && type != "MOD_BURNED" )
 		{
 			self zombie_head_gib( attacker );
