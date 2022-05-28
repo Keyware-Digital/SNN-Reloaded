@@ -1359,7 +1359,7 @@ round_spawning()
 		}
 
 		max += int( ( ( get_players().size - 1 ) * level.zombie_vars["zombie_ai_per_player"] ) * multiplier ); 
-		if(level.round_number < 3 && level.script == "nazi_zombie_asylum")
+		if(level.round_number < 3 && level.script == "nazi_zombie_sumpf")
 		{
 			if(get_players().size > 1)
 			{
