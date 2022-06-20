@@ -3273,20 +3273,20 @@ player_melee()
 	self endon( "disconnect" );
 	self endon( "death" );
  
-	for(;;)
+	while(1)
 	{
-		if( self MeleeButtonPressed())
+		if(self IsMeleeing())
 		{
 			if( level.player_is_speaking != 1 )
 			{
-				r = randomIntRange( 1, 7 );
+				r = randomIntRange( 0, 7 );
 				sound = maps\_zombiemode_weapons::get_player_index( self );
 				level.player_is_speaking = 1;
 				self playsound( "plr_" + sound + "_vox_gen_exert_" + r );
-				wait 1;
+				wait 0.75;
 				level.player_is_speaking = 0;
 			}
 		}
-	wait 1;
+	wait 0.5;
 	}
 }
