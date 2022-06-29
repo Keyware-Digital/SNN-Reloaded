@@ -362,7 +362,7 @@ watch_for_drop()
 
 		for (i = 0; i < players.size; i++)
 		{
-			curr_total_score += players[i].score_total * 2;
+			curr_total_score += players[i].score_total;	//hotfix for round 1 powerup bug (after 6 zombie edit)
 		}
 		
 		if (curr_total_score > score_to_drop )
